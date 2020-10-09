@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head ondragstart="return false">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				display: flex;
+				font-size: 12px;
+				background-color: rgb(46, 46, 46);
+				color: rgb(227, 227, 227);
+			}
+
+			.stage {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				width: 400px;
+				height: 400px;
+				background: lightblue;
+				display: flex;
+				flex-wrap: wrap;
+				margin: 40px 5% 0 20%;
+				position: relative;
+			}
+
+			.stage li {
+				/* background: lightcoral; */
+				background: url('./img/a.jpg');
+				border-radius: 5px;
+				box-shadow: 0 0 0 2px white inset;
+				/* background-image: url(1.jpg); */
+				/* background-size: 400% auto; */
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 0.3s;
+			}
+
+			.box {
+				width: 200px;
+				height: 200px;
+				/* background-color: lightblue; */
+				margin-top: 40px;
+				color: rgb(227, 227, 227);
+			}
+
+			button,
+			select {
+				width: 120px;
+				height: 40px;
+				display: block;
+				margin-bottom: 30px;
+				line-height: 40px;
+				text-align: center;
+				text-decoration: none;
+				color: #333;
+				background: #fefefe;
+				border: 1px solid #eee;
+				border-radius: 2px;
+				box-shadow: 1px 1px 2px #eee;
+				border-color: #ddd #d2d2d2 #d2d2d2 #ddd;
+				outline: none;
+				cursor: pointer;
+			}
+
+			select {
+				width: auto;
+				padding: 0 17%;
+				margin-bottom: 30px;
+			}
+
+			select option {
+				text-align: center;
+			}
+
+			h3 {
+				line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- http://www.jq22.com/demo/jquerypintu201807200934/img/jq22.jpg -->
+		<ul class="stage"></ul>
+		<div class="box">
+			<button>开始</button>
+			<select>
+				<option value="3">入门</option>
+				<option value="4">简单</option>
+				<option value="6">普通</option>
+				<option value="8">困难</option>
+			</select>
+			<h3>游戏时间：<span></span></h3>
+			<h3>游戏步数：<span class="step"></span></h3>
+		</div>
+		<script>
+			// 获取元素
+			var stage = document.querySelector(".stage"); // 大盒子
+			var sel = document.querySelector('select') // 选择难度下拉框
+			var size = 3; // 难度初始化为 3 x 3 
+			newNode(size) // 初始化生成难度为 3 x 3 的拼图
+
+			// 定义生成拼图方法
+			function newNode(size) {
+				for (var i = 0; i < size * size; i++) {
+					var node = document.createElement("li");
+					// 动态设置尺寸
+					node.style.width = 100 / size + "%";
+					node.style.height = 100 / size + "%";
+
+					// 设置背景偏移
+					node.style.backgroundPosition =
+						(i % size) * -100 +
+						"% " +
+						Math.floor(i / size) * -100 +
+						"%";
+
+					node.style.left = (i % size) * (100 / size) + "%";
+					node.style.top = Math.floor(i / size) * (100 / size) + "%";
+					
+					// 设置背景大小随着难度变化
+					node.style.backgroundSize = size * 100 + '% auto'
+					// 添加拖动属性
+					node.draggable = "true";
+					// 每个拼图添加一个id标记
+					node.id = "card" + i;
+					// 将所有生成的 li 添加到父容器里
+					stage.appendChild(node);
+					// 获取当前所有的拼图块（当每次 size 改变时，都重新获取当前所有的拼图块）
+					cards = stage.querySelectorAll("li");
+				}
+			}
+
+
+			var cards = stage.querySelectorAll("li"); // 初始化获取所有拼图块(此时获取到的是 size为 3 x 3的 长度为9)
+
+			// 定义随机函数
+			function random() {
+				return Math.floor(Math.random() * size * size);
+			}
+
+			// 定义计时器
+			var time = document.querySelector('.box h3 span') // 获取定时器容器
+			var count = 0; // 
+			var step = document.querySelector('.step') // 初始化游戏步数为 0
+			time.innerHTML = count // 定义游戏时间
+			var gameTime = null; // 定义一个空的定时器
+
+			// 洗牌功能
+			var isshuffle = false // 初始化为未洗牌
+			var btn = document.querySelector('button') // 获取开始按钮
+			var start = true; // 定义变量判断是否可以洗牌
+			// 点击按钮
+			btn.onclick = function() {
+				// 洗牌状态改变
+				isshuffle = !isshuffle
+				console.log('当前洗牌状态:',isshuffle)
+				// 如果洗牌状态为 true
+				if (isshuffle) {
+					// 只允许开始按钮调用一次洗牌功能
+					// 如果 start 为 true 则调用洗牌方法
+					if (start) {
+						console.log('调用洗牌方法')
+						shuffle()
+						// 重新设置为 false，阻止后面再次点击按钮又洗牌
+						start = false
+					}
+
+					// 调用拖动功能
+					move(true)
+					
+					// 清除定时器
+					clearInterval(gameTime)
+					// 设置定时器
+					gameTime = setInterval(function() {
+						count++ // 每秒钟增加一
+						time.innerHTML = count // 将 count 赋值给游戏时间的文本内容
+					}, 1000)
+					btn.innerHTML = '暂停' // 改变按钮的文本内容
+					
+					// 当前按钮为暂停状态
+				} else {
+					// 清除定时器
+					clearInterval(gameTime)
+					btn.innerHTML = '开始' // 改变按钮的文本内容
+					console.log('禁用拖动功能')
+					// 调用拖动功能
+					move(false)
+				}
+				console.log('isshuffle', isshuffle)
+			}
+			
+			// 定义洗牌方法
+			function shuffle() {
+				// 定义数组，进行排序
+				var arr = [];
+				for (var i = 0; i < size * size; i++) {
+					arr.push(i);
+				}
+				// console.log(arr);
+
+				var tmp = [];
+				// 定义新数组重新排序
+				for (var i = 0; i < size * size; i++) {
+					tmp.push(
+						arr.splice(Math.floor(Math.random() * arr.length), 1)[0]
+					);
+				}
+				// console.log(tmp);
+
+				// 遍历所有拼图块，重新赋值Position
+				cards.forEach(function(element, index) {
+					element.style.left =
+						(tmp[index] % size) * (100 / size) + "%";
+					element.style.top =
+						Math.floor(tmp[index] / size) * (100 / size) + "%";
+				});
+			}
+			
+			
+			var num = 0; // 定义游戏步数
+			step.innerText = num // 初始化游戏步数为 0 
+			
+			// 定义拼图块拖动功能
+			function move(flag) {
+				// 如果传入参数为 true,则允许拖动
+				if (flag == true) {
+					console.log('执行拖动')
+					// 遍历所有拼图块，添加拖动功能
+					cards.forEach(function(element, index) {
+						element.ondragstart = function(event) {
+							event.dataTransfer.setData("text", event.target.id);
+						};
+						element.ondragover = function(event) {
+							// console.log('x')
+							event.preventDefault();
+						};
+
+						element.ondrop = function(event) {
+							// console.log("drop", event.target, event.dataTransfer.getData('text'));
+							event.preventDefault();
+
+							// 获取两个元素
+							var e1 = event.target;
+							var e2 = document.getElementById(
+								event.dataTransfer.getData("text")
+							);
+
+							// 交叉互换定位
+							var tmp = {
+								top: e1.style.top,
+								left: e1.style.left,
+							};
+
+							e1.style.top = e2.style.top;
+							e1.style.left = e2.style.left;
+
+							e2.style.top = tmp.top;
+							e2.style.left = tmp.left;
+
+							// console.log(e1, e2);
+
+
+							// 判断当前拖动的块是不是还在初始定位点
+							// 如果是，则不执行操作
+							if (e1.style.top == e2.style.top && e1.style.left == e2.style.left) {
+								console.log('拖动同一个')
+								return false
+							}
+							
+							num++; // 拖动一次，num加1
+							console.log(num)
+							step.innerText = num // 改变游戏步数文本
+							
+							// 遍历所有拼图块，判断每个的当前定位点 是不是 初始定位点
+							var check = Array.prototype.every.call(cards, function(
+								element,
+								index
+							) {
+								return (
+									parseInt(element.style.top) ==
+									parseInt(
+										Math.floor(index / size) * (100 / size) +
+										"%"
+									) &&
+									parseInt(element.style.left) ==
+									parseInt((index % size) * (100 / size) + "%")
+								);
+							});
+
+							console.log(check);
+							
+							// 如果拼完成
+							if (check) {
+								console.log(btn.innerText)
+								// 设置0.3秒后执行
+								setTimeout(function() {
+									alert('恭喜通关,你一共用时' + time.innerText + '秒,移动' + num + '步');
+									num = 0 // 将步数重新设置为0
+									count = 0 // 将时间重新设置为0
+									time.innerText = count // 重新赋值文本
+									step.innerText = num // 重新赋值文本
+									btn.innerText = '重新开始' // 改变按钮文本
+								}, 300)
+								// 清除游戏时间定时器
+								clearInterval(gameTime)
+								// 所有拼图块禁用拖动
+								cards.forEach(function(element, index) {
+									element.ondrop = null
+									console.log('不执行拖动')
+								});
+								start = true; // 重新设置是否可以洗牌状态
+								isshuffle = false; //重新初始化为未洗牌状态
+								return false
+							}
+						};
+					});
+					// 如果传入参数为 false,则禁用拖动
+				} else {
+					cards.forEach(function(element, index) {
+						element.ondrop = null
+						console.log('不执行拖动')
+					});
+					console.log('不执行拖动')
+					return false
+				}
+			}
+
+			// 难度下拉列表改变时
+			sel.onchange = function() {
+				stage.innerHTML = '' // 先清除上一次的拼图内容
+				size = sel.value; // 重新获取当前的拼图难度
+				console.log(size)
+				newNode(size) // 调用生成拼图方法
+				// 清除游戏时间定时器
+				clearInterval(gameTime)
+				num = 0 // 将步数重新设置为0
+				count = 0 // 将时间重新设置为0
+				time.innerText = count // 重新赋值文本
+				step.innerText = num // 重新赋值文本
+				btn.innerText = '开始' // 改变按钮文本
+				isshuffle = false //重新初始化为未洗牌状态
+				shuffle() // 调用洗牌方法
+				console.log('当前size为：' + size)
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            text-align: center;
+        }
+        .slide{
+            display: block; 
+			width: 80px;
+			height: 30px;
+			background-color: #ccc;
+			border-radius: 20px;
+			position: relative;
+			margin: 50px auto;
+			cursor: pointer;
+			overflow: hidden;
+			transition: all .4s;
+			box-shadow: 0 0 3px #000000;
+        }
+        input{
+            /* display: none; */
+            opacity: 0.3;
+        }
+        .btn{
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            color: white;
+            position: absolute;
+            top: 2px;
+            left: 5px;
+            background-color: white;
+            transition:  all 0.4s;
+        }
+        .on,.off{
+            position: absolute;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            color: white;
+            font-size: 16px;
+            line-height: 30px;
+            text-align: center;
+            transition: all 0.6s;
+            font-weight: bold;
+        }
+        .on{
+            left: -40px;
+        }
+        .off{
+            right: 5px;
+        }
+        label.dis{
+            background-color: #c9c9c9 !important;
+        }
+        
+    </style>
+</head>
+<body onselectstart="return false" style="background-image: linear-gradient(to left, #6FB6C2, #6FC278);">
+    <h3>Radio</h3>
+		<label class="slide">
+			<input type="radio" name="sex" id="" value="on" checked="" />
+			<div class="btn"></div>
+			<div class="on">ON</div>
+			<div class="off">OFF</div>
+		</label>
+
+		<label class="slide dis">
+			<input type="radio" name="sex" id="" value="off" />
+			<div class="btn"></div>
+			<div class="on">ON</div>
+			<div class="off">OFF</div>
+		</label>
+
+		<label class="slide">
+			<input type="radio" name="sex" id="" value="off" />
+			<div class="btn"></div>
+			<div class="on">ON</div>
+			<div class="off">OFF</div>
+		</label>
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+<script >
+    $(function(){
+        $('.slide').each(function(index,element){
+            var isCheck = $(element).find('input').prop('checked')
+            if ($(element).hasClass('dis')) {
+				$(this).css("pointer-events", "none")
+            }
+            // console.log($('input').prop('checked'))
+            if(isCheck){
+                $(element).css('backgroundColor', 'limegreen')
+				$(element).find('.btn').css('left', '50px')
+				$(element).find('.on').css('left', '5px')
+				$(element).find('.off').css('right', '-40px')
+            }else{
+                $(element).css('backgroundColor', 'gray')
+				$(element).find('.btn').css('left', '5px')
+				$(element).find('.on').css('left', '-40px')
+				$(element).find('.off').css('right', '5px')
+            }
+        })
+
+        $('.slide').click(function(){
+            $('.slide').each(function(index,element){
+                var isCheck = $(element).find('input').prop('checked')
+                console.log($('input').prop('checked'))
+                if (!isCheck) {
+					$(element).css('backgroundColor', 'gray')
+					$(element).find('.btn').css('left', '5px')
+					$(element).find('.on').css('left', '-40px')
+					$(element).find('.off').css('right', '5px')
+				}  else {
+					$(element).css('backgroundColor', 'limegreen')
+					$(element).find('.btn').css('left', '50px')
+					$(element).find('.on').css('left', '5px')
+					$(element).find('.off').css('right', '-40px')
+				}
+            })
+        })
+    })
+</script>
+
+</html>

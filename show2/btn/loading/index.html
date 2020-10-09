@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+    <button type="button" class="am-btn am-btn-primary btn-loading-example"
+        data-am-loading="{spinner: 'circle-o-notch', loadingText: '加载中...', resetText: '加载过了'}">按钮 - button 元素</button>
+
+    <input type="button" class="am-btn am-btn-secondary btn-loading-example" value="按钮 - input 元素"
+        data-am-loading="{loadingText: '努力加载中...'}" />
+    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3642801406,2373836491&fm=26&gp=0.jpg" style="display: none;" alt="">
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        $('.btn-loading-example').click(function () {
+            var $btn = $(this)
+            $btn.button('loading');
+            setTimeout(function () {
+                $('img').attr('display:block');
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>

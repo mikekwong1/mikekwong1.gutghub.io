@@ -1,0 +1,511 @@
+body {
+  line-height: 1;
+  background-color: #abcdef;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.demoBox {
+  width: 100%;
+  padding: 50px 0;
+}
+.demoBox .title {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.demoBox .demoList {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.demoBox .demoList .demoItem {
+  width: calc(33.3% - 10px);
+  height: 170px;
+  margin: 5px 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.3);
+}
+.demoBox .demoList .demoItem .container {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: proxima nova;
+}
+.google-animation-1 {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.google-animation-1 .shape-1 {
+  left: 0;
+  -webkit-animation: Animation1Shape1 0.5s ease infinite alternate;
+  animation: AnimatioinShape1 0.5s ease infinite alternate;
+}
+.google-animation-1 .shape-2 {
+  right: 0;
+  -webkit-animation: Animation1Shape2 0.5s ease infinite alternate;
+  animation: Animation1Shape2 0.5s ease infinite alternate;
+}
+.google-animation-1 .shape-3 {
+  bottom: 0;
+  animation: Animation1Shape3 0.5s ease infinite alternate;
+  -webkit-animation: Animation1Shape3 0.5s ease infinite alternate;
+}
+.google-animation-1 .shape-4 {
+  right: 0;
+  bottom: 0;
+  -webkit-animation: Animation1Shape4 0.5s ease infinite alternate;
+  animation: Animation1Shape4 0.5s ease infinite alternate;
+}
+.google-animation-1 .shape {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+.google-animation-2 {
+  animation: Animation2Container 1s ease infinite;
+}
+.google-animation-2 .shape-1 {
+  left: 0;
+  animation: Animation2Shape1 0.5s ease infinite alternate;
+}
+.google-animation-2 .shape-2 {
+  right: 0;
+  animation: Animation2Shape2 0.5s ease infinite alternate;
+}
+.google-animation-2 .shape-3 {
+  bottom: 0;
+  animation: Animation2Shape3 0.5s ease infinite alternate;
+}
+.google-animation-2 .shape-4 {
+  right: 0;
+  bottom: 0;
+  animation: Animation2Shape4 0.5s ease infinite alternate;
+}
+.google-animation-2 .shape {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+}
+.google-animation-3 {
+  animation: Animation3Container 1s ease infinite;
+}
+.google-animation-3 .shape-1 {
+  left: 0;
+  border-top-left-radius: 100%;
+  animation: Animation3Shape1 0.5s ease infinite alternate;
+}
+.google-animation-3 .shape-2 {
+  right: 0;
+  border-top-right-radius: 100%;
+  animation: Animation3Shape2 0.5s ease infinite alternate;
+}
+.google-animation-3 .shape-3 {
+  bottom: 0;
+  border-bottom-left-radius: 100%;
+  animation: Animation3Shape3 0.5s ease infinite alternate;
+}
+.google-animation-3 .shape-4 {
+  right: 0;
+  bottom: 0;
+  border-bottom-right-radius: 100%;
+  animation: Animation3Shape4 0.5s ease infinite alternate;
+}
+.google-animation-3 .shape {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+.google-animation-4 {
+  transform: rotate(45deg);
+  animation: Animation4Container 1s ease infinite;
+}
+.google-animation-4 .shape-1 {
+  left: 0;
+  animation: Animation4Shape1 0.3s ease infinite alternate;
+}
+.google-animation-4 .shape-2 {
+  right: 0;
+  animation: Animation4Shape2 0.3s ease infinite 0.3s alternate;
+}
+.google-animation-4 .shape-3 {
+  bottom: 0;
+  animation: Animation4Shape3 0.3s ease infinite 0.3s alternate;
+}
+.google-animation-4 .shape-4 {
+  right: 0;
+  bottom: 0;
+  animation: Animation4Shape4 0.3s ease infinite alternate;
+}
+.google-animation-4 .shape {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+}
+.google-animation-5 {
+  transform: rotate(45deg);
+}
+.google-animation-5 .shape-1 {
+  left: 0;
+  animation: Animation5Shape1 2s ease infinite;
+}
+.google-animation-5 .shape-2 {
+  right: 0;
+  animation: Animation5Shape2 2s ease infinite;
+}
+.google-animation-5 .shape-3 {
+  bottom: 0;
+  animation: Animation5Shape3 2s ease infinite;
+}
+.google-animation-5 .shape-4 {
+  right: 0;
+  bottom: 0;
+  animation: Animation5Shape4 2s ease infinite;
+}
+.google-animation-5 .shape {
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  position: absolute;
+}
+.google-animation-6 .shape-1 {
+  left: 0;
+  animation: Animation6Shape1 2s linear infinite;
+}
+.google-animation-6 .shape-2 {
+  right: 0;
+  animation: Animation6Shape2 2s ease infinite;
+}
+.google-animation-6 .shape-3 {
+  bottom: 0;
+  animation: Animation6Shape3 2s ease infinite;
+}
+.google-animation-6 .shape-4 {
+  right: 0;
+  bottom: 0;
+  animation: Animation6Shape4 2s ease infinite;
+}
+.google-animation-6 .shape {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  border-radius: 2px;
+}
+#google .demoItem {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#google .demoItem .container .shape-1 {
+  background-color: #1875e5;
+}
+#google .demoItem .container .shape-2 {
+  background-color: #c5523f;
+}
+#google .demoItem .container .shape-3 {
+  background-color: #499255;
+}
+#google .demoItem .container .shape-4 {
+  background-color: #f2b736;
+}
+@keyframes AnimatioinShape1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(16px, 16px);
+  }
+}
+@keyframes Animation1Shape2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-16px, 16px);
+  }
+}
+@keyframes Animation1Shape3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(16px, -16px);
+  }
+}
+@keyframes Animation1Shape4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-16px, -16px);
+  }
+}
+@keyframes Animation2Shape1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 20px);
+  }
+}
+@keyframes Animation2Shape2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-20px, 20px);
+  }
+}
+@keyframes Animation2Shape3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, -20px);
+  }
+}
+@keyframes Animation2Shape4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-20px, -20px);
+  }
+}
+@keyframes Animation2Container {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Animation3Shape1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5px, 5px);
+  }
+}
+@keyframes Animation3Shape2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-5px, 5px);
+  }
+}
+@keyframes Animation3Shape3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5px, -5px);
+  }
+}
+@keyframes Animation3Shape4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-5px, -5px);
+  }
+}
+@keyframes Animation3Container {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Animation4Shape1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5px, 5px);
+  }
+}
+@keyframes Animation4Shape2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-5px, 5px);
+  }
+}
+@keyframes Animation4Shape3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5px, -5px);
+  }
+}
+@keyframes Animation4Shape4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-5px, -5px);
+  }
+}
+@keyframes Animation4Container {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Animation5Shape1 {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translate(100%, 100%);
+  }
+  75% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes Animation5Shape2 {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translate(-100%, 100%);
+  }
+  75% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes Animation5Shape3 {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translate(100%, -100%);
+  }
+  75% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes Animation5Shape4 {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translate(-100%, -100%);
+  }
+  75% {
+    transform: translate(0, -100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes Animation6Shape1 {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateX(17px);
+  }
+  50% {
+    transform: translate(17px, 17px);
+  }
+  75% {
+    transform: translate(0, 17px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes Animation6Shape2 {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(17px);
+  }
+  50% {
+    transform: translate(-17px, 17px);
+  }
+  75% {
+    transform: translate(-17px, 0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes Animation6Shape3 {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(-17px);
+  }
+  50% {
+    transform: translate(17px, -17px);
+  }
+  75% {
+    transform: translate(17px, 0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes Animation6Shape4 {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateX(-17px);
+  }
+  50% {
+    transform: translate(-17px, -17px);
+  }
+  75% {
+    transform: translate(0, -17px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

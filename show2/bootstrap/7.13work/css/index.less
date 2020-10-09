@@ -1,0 +1,201 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.home {
+  #nav {
+    .container-v {
+      overflow: hidden;
+      .header {
+        display: block;
+        height: auto;
+        padding: 16px;
+        .logo {
+          float: left;
+          margin-left: 12px;
+          width: 36px;
+        }
+        .primary {
+          // float: left;
+          display: inline-block;
+          ul {
+            display: inline-block;
+            padding: 0;
+            white-space: nowrap;
+            li {
+              float: left;
+              white-space: nowrap;
+              a {
+                font-size: 16px;
+                font-size: 1.6rem;
+                color: inherit;
+                display: block;
+                font-weight: 700;
+                letter-spacing: 1px;
+                padding: 5px 10px 5px;
+                text-transform: uppercase;
+              }
+            }
+
+            li.stores {
+            }
+            li.account {
+            }
+            li.menu {
+            }
+          }
+        }
+        .icon {
+          background: none;
+          border: 0;
+          outline: none;
+          float: right;
+          height: auto;
+          margin-top: 10px;
+          img {
+            display: block;
+            height: 24px;
+            opacity: 0.8;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      .body {
+        .container-v {
+        }
+        .lto-items{
+            padding-top: 40px;
+            text-align: center;
+        }
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+#content {
+  position: relative;
+  overflow: hidden;
+  .hero {
+    text-align: center;
+    background-color: white;
+    
+  }
+  .wrapper {
+    text-align: center;
+    padding: 30px 0;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
+    width: 100%;
+    h2{
+        font-size: 2.2rem;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  #nav {
+    background-color: #fff;
+    bottom: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 30%;
+    .container-v {
+      height: 100%;
+      height: 100%;
+      .header {
+        padding: 24px;
+        .primary {
+          max-width: calc(100%-72px);
+          overflow: hidden;
+        }
+      }
+      .body {
+        height: calc(100% - 98px);
+        display: table;
+        width: 100%;
+        .container-v {
+          vertical-align: middle;
+          padding: 0 24px 0 84px;
+          line-height: 250%;
+          display: table-cell;
+          height: 100%;
+          clear: both;
+          min-height: 62px;
+          h3 {
+            margin-bottom: 12px;
+          }
+          .tab-wrapper {
+            margin-left: 2px;
+            display: block;
+            ul {
+              display: inline-block;
+              margin: 0;
+              a {
+                display: inline;
+                color: rgba(0, 0, 0, 0.56);
+                padding: 6px 0;
+                font-size: 18px;
+                &:hover {
+                  color: inherit;
+                }
+                &.active {
+                  border-bottom: 3px solid #00a862;
+                  color: rgba(0, 0, 0, 0.87);
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+          a.active {
+            margin-bottom: 2px;
+            padding-bottom: 1px;
+          }
+        }
+      }
+    }
+  }
+  #content {
+    left: auto;
+    margin-left: 30%;
+    padding-bottom: 24px;
+    // padding-top: 24px;
+    width: 70%;
+    .tag_ad {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0px 6px;
+      color: #fff;
+      background-color: #000;
+      font-size: 1.2rem;
+      line-height: 180%;
+      opacity: 0.6;
+      border-radius: 2px;
+      z-index: 200;
+    }
+  }
+  .wrapper{
+      padding-left: 16px;
+      padding-left: 16px;
+  }
+  .columns-3>*{
+      box-sizing: border-box;
+      clear: none;
+      float: left;
+      margin: 0;
+      padding: 0;
+      width: 33.3333333333%;
+  }
+  .grid.columns-3>*:nth-child(3n+1){
+      clear: left;
+  }
+  .grid.padded-2>*{
+      padding: 12px;
+  }
+}

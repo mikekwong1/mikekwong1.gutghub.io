@@ -1,0 +1,528 @@
+.box{
+	width: 100%;
+	height: 100%;
+}
+.s-nav{
+	font-size: 14px;
+	font-weight: 700px;
+	zoom:1;
+}
+/*header start */
+.box>header{
+	height: 470px;
+	width: 100%;
+	background-size: cover;
+	background:url(../img/u=1949864229,373156568&fm=26&gp=0_副本.jpg) no-repeat 50% 50%;
+	position: relative;
+}
+.box>header>div.container{
+	height: 300px;
+	width: 1208px;
+	/*background-color: blue;*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+header>div.container>.columns-top{
+	width: 100%;
+    height: 256px;
+    /*background-color: pink;*/
+}
+header .columns-top>.imperssion{
+	display: table;
+    table-layout: fixed;
+    text-align: center;
+    /*background-color: #efefef;*/
+    width: 490px;
+    height: 220px;
+    margin: auto auto 85px;
+    position: relative;
+}
+header .columns-top>.imperssion>.left{
+	width: 180px;
+	height: 180px;
+}
+header .columns-top>.imperssion>.left>div{	
+	width: 220px;
+	height: 220px;
+}
+header .columns-top>.imperssion>.left>.icon{
+	width: 100%;
+	height: 100%;
+	
+}
+header .columns-top>.imperssion>.left>.icon>img{
+	border-radius: 100%;
+	border: 3px solid black;
+}
+header .columns-top>.imperssion>.right{
+	height: 80%;
+	width:  260px;
+	/*background-color:yellow;*/
+	position: absolute;
+	right: 40px;
+    top: 8px;
+}
+header>div.container>.columns-bottom{
+	height: 44px;
+    width: 100%;
+   /* background-color: green;*/
+}
+header>div.container>.columns-bottom>ul{
+	border-bottom: 2px solid #fff;
+	border-top: 1px solid #fff;
+	padding: 8px 0;
+	box-sizing: border-box;
+	text-align: center;
+	margin: 0 auto;
+	width: 290px;
+	height: 44px;
+}
+header>div.container>.columns-bottom li{
+	float: left;
+	margin: 0 10px;
+	zoom:1;
+}
+header>div.container>.columns-bottom a{
+	color: white;
+	font-size: 14px;
+	font-weight: 700px;
+	zoom:1;
+}
+header>div.container>.columns-bottom a:hover{
+	color: white;
+	font-size: 14px;
+	font-weight: 700px;
+	zoom:1;
+	/*font-style:*/ 
+}
+/*header end*/
+/*main start*/
+/*关于我 start*/
+main>.gyw{
+	width: 100%;
+	height: 235px;
+	background-color: #f3eded;
+	position: relative;
+}
+main .contianer{
+	width: 1056px;
+	/*height: 122px;*/
+	/*background-color: green;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+main .title>p{
+	font-size: 18px;
+	font-weight: 600;
+	padding-left: 10px;
+
+	box-sizing: border-box;
+	position: relative;
+}
+main .title>p:after{
+	content: "";
+    width: 75px;
+    /* height: 27px; */
+    border-bottom: 3px solid black;
+    position: absolute;
+    left: 5px;
+    bottom: -8px;
+}
+main>.gyw .title-bottom{
+	width: 100%;
+	height: 70px;
+	/*background-color: yellow;*/
+}
+main>.gyw .title-bottom>p{
+	font-size: 17px;
+	padding: 0 50px;
+	color: #6d6565;
+	font-weight: 500;
+}
+/*光宇我 end*/
+/*个人经历 start*/
+main>.grjl{
+	width: 100%;
+	height: 1000px;
+	/*background-color: pink;*/
+	position: relative;
+}
+main>.grjl>.contianer{
+	height: 80%;
+}
+main>.grjl>.contianer>.header-p>p{
+	color: #7396a4;
+}
+main>.grjl>.contianer>.contianer-bottom{
+	width: 100%;
+	height: 675px;
+	/*background-color: #efefef;*/
+}
+main>.grjl>.contianer>.contianer-bottom>div{
+	height: 30%;
+	width: 100%;
+	/*background-color: white;*/
+	margin-bottom: 30px;
+	padding: 0 10px;
+	position: relative;
+}
+main>.grjl>.contianer>.contianer-bottom>div:before{
+	content: "";
+	width: 6px;
+	height: 6px;
+	display: block;
+	border: 2px solid #998d71;
+	border-radius: 10px;
+	position: absolute;
+	left: 20px;
+    top: 20px;
+}
+main>.grjl>.contianer>.contianer-bottom>div:after{
+	content: "";
+    height: 220px;
+    width: 1px;
+    border-left: 3px dotted #998d71;
+    position: absolute;
+  	left: 23px;
+    top: 32px;
+    z-index: 9;
+}
+main>.grjl>.contianer>.contianer-bottom>div:nth-child(2)after{
+	 height: 230px;
+}
+main>.grjl>.contianer>.contianer-bottom>div:last-child{
+	margin-bottom: 0px;
+}
+main>.grjl>.contianer>.contianer-bottom>div>.left{
+	/*background-color: blue;*/
+	position: absolute;
+	left: 50px;
+    top: 20px;
+}
+main>.grjl>.contianer>.contianer-bottom>div>.right{
+	height: 100%;
+	width: 300px;
+	/*background-color: red;*/
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+main>.grjl>.contianer>.contianer-bottom>div>.right>.icon{
+	width: 100%;
+	height: 100%;
+}
+/*个人经历 end*/
+/*个人作品 start*/
+main>div.grzp{
+	width: 100%;
+	height: 900px;
+	/*background-color: pink;*/
+	position: relative;
+	background: url(../img/背景图2_副本.jpg) no-repeat 0 0 ;
+}
+main>div.grzp>.contianer{
+	height: 80%;
+	/*position: relative;*/
+}
+main>div.grzp>.contianer>.header-p>p{
+	color: #7396a4;
+}
+main>div.grzp>.contianer>.img-box{
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	/*background-color: blue;*/
+}
+main>div.grzp>.contianer>.img-box>ul{
+	float: left;
+	width: 25%;
+	height: 100%;
+	/*background-color: green;*/
+}
+main>div.grzp li{
+	width: 100%;
+    height: 125px;
+    margin-right: 10px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    background-color: red;
+}
+main>div.grzp li:last-child{
+	margin-bottom: 0px;
+}
+main>div.grzp>div.img-box{
+	position: relative;
+}
+main>div.grzp>div.img-box>div{
+	float: left;
+}
+main>div.grzp div.data1{
+	position: absolute;
+    left: 13px;
+    top: 10px;
+    width: 200px;
+    height: 100px;
+}
+main>div.grzp div.data2{
+	width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 234px;
+    top: 10px;
+   
+}
+main>div.grzp div.data3{
+	width: 200px;
+    height: 100px;
+	position: absolute;
+    left: 450px;
+    top: 10px;
+    
+}
+main>div.grzp div.data4{
+	width: 165px;
+    height: 100px;
+    position: absolute;
+    left: 670px;
+    top: 10px;
+}
+main>div.grzp div.data5{
+	width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 10px;
+    top: 300px;
+}
+main>div.grzp div.data6{
+	width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 235px;
+    top: 225px;
+}
+main>div.grzp div.data7{
+	width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 450px;
+    top: 170px;
+}
+main>div.grzp div.data8{
+	width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 450px;
+    top: 330px;
+}
+main>div.grzp div.data9{
+	width: 165px;
+    height: 100px;
+    position: absolute;
+    left: 670px;
+    top: 250px;
+}
+main>div.grzp  img.auto-img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*个人作品 end*/
+/*打哥招呼吧 start*/
+main>div.dgzhb{
+	width: 100%;
+	height: 461px;
+	/*background-color: cyan;*/
+	position: relative;
+	background: url(../img/u=2503650478,34417582&fm=26&gp=0_副本.jpg) no-repeat 50% 50% ;
+}
+main>div.dgzhb>.contianer{
+	height: 351px;
+	color: white;
+}
+main>div.dgzhb>.contianer>div.title>p{
+	font-size: 20px;
+}
+main>div.dgzhb>.contianer>div.title>p:after {
+    content: "";
+    width: 100px;
+    /* height: 27px; */
+    border-bottom: 3px solid white;
+    position: absolute;
+    left: 9px;
+    bottom: -16px;
+}
+main>div.dgzhb>.contianer>.contianer-bottom{
+	width: 100%;
+	height: 223px;
+	/*background-color: pink;*/
+	position:relative;
+}
+main>div.dgzhb>.contianer>.contianer-bottom>div.right{
+	width: 275px;
+	height: 223px;
+	font-size: 18px;
+	font-weight: 545;
+	/*background-color: yellow;*/
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	padding:15px;
+	box-sizing: border-box;
+}
+main>div.dgzhb>.contianer>.contianer-bottom>div.right>div{
+	margin-top: 5px;
+	position: relative;
+}
+main>div.dgzhb>.contianer>.contianer-bottom>div.right>div::before{
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: -25px;
+	top: 0;
+	background:  url(../img/地址_wps图片_副本.png)no-repeat 0 0;
+}
+main>div.dgzhb>.contianer>.contianer-bottom>div.right>div:nth-child(2)::before{
+	background: url(../img/手机_wps图片_副本.png);
+}
+main>div.dgzhb>.contianer>.contianer-bottom>div.right>div:nth-child(3)::before{
+	background: url(..//img/时间_wps图片_副本.png);
+}
+main>div.dgzhb>.contianer>.contianer-bottom>div.right>div:nth-child(4)::before{
+	background: url(..//img/邮箱_wps图片_副本.png);
+}
+main>div.dgzhb>.contianer>.contianer-bottom>div.left{
+	height: 223px;
+	width: 80%;
+	/*background-color: purple;*/
+}
+main>div.dgzhb .left-top{
+	width: 100%;
+	height: 60%;
+	/*background-color: white;*/
+}
+main>div.dgzhb .left-top-left{
+	height: 100%;
+	width: 40%;
+	/*background-color: purple;*/
+}
+main>div.dgzhb .left-top-left .input-box:nth-child(1){
+	margin-top: 0px;
+}
+main>div.dgzhb .left-top-left .input-box{
+	width: 100%;
+	height: 45%;
+	padding-left: 10px;
+	margin-top: 10px;
+}
+main>div.dgzhb .left-top-left input{
+	width: 90%;
+	height: 100%;
+	font-size: 18px;
+	padding-left: 10px;
+	cursor: text;
+}
+main>div.dgzhb .left-top-left input:focus::-webkit-input-placeholder{
+	color: transparent;
+}
+main>div.dgzhb .left-top-left input::-webkit-input-placeholder{
+	font-size: 18px;
+	padding-left: 10px;
+}
+main>div.dgzhb .left-bottom-left{
+	width: 52%;
+	height: 98%;
+	position: relative;
+
+}
+main>div.dgzhb .left-bottom-left label{
+	position: absolute;
+	left: 12px;
+	top:12px;
+	z-index: 9;
+	color: #757575;
+	font-size: 18px;
+}
+main>div.dgzhb .left-bottom-left textarea{
+	font-size: 18px;
+	padding-left: 10px;
+	box-sizing: border-box;
+	padding-top: 15px;
+	width: 80%;
+	height: 102%;
+	position: relative;
+
+
+}
+main>div.dgzhb .left-bottom-left textarea:focus+label{
+	display: none;
+}
+main>div.dgzhb .left-bottom{
+	height: 40%;
+	width: 400px;
+}
+main>div.dgzhb .left-bottom button{
+	margin-top: 10px;
+	height: 70%;
+	width: 200px;
+	margin-left: 10px;
+	font-size: 20px;
+	background-color: #383b3b;
+	color: white;
+	border: 0px;
+}
+/*打个招呼吧 end*/
+/*footer start*/
+main>footer{
+	width: 100%;
+	height: 200px;
+	/*background-color: blue;*/
+	position: relative;
+}
+main>footer>.contianer{
+	height: 50%;
+	/*background-color: pink;*/
+}
+main>footer>.contianer>div{
+	width: 100%;
+	height: 50%;
+	/*background-color:#efefef;*/
+	font-size: 15px;
+	color: #50555c;
+}
+main>footer>.contianer>div>.i{
+	width: 20px;
+	height: 20px;
+}
+/*footer end*/
+/*main end*/

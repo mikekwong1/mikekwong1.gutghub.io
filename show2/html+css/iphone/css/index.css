@@ -1,0 +1,266 @@
+/*头部start*/
+.box{
+	max-width: 640px;
+	height: 100%;
+	margin:  0 auto;
+	border:1px solid #ddd;
+	box-shadow: 0px  0px 5px 0px #ddd;
+	padding: 40px 0px 80px;
+	box-sizing: border-box;
+}
+.header{
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	text-align: center;
+	/*line-height: 60px;*/
+	position: fixed;
+	top: 0px;
+	max-width: 640px;
+	border-bottom: 1px solid #ddd;
+	box-sizing: border-box;
+	z-index: 9;
+}
+.header>input:focus+div{
+	display: none;
+}
+.header>input:focus::-webkit-input-placeholder{
+	color: transparent;
+}
+.header>input{
+	width: 90%;
+	height: 36px;
+	background-color: #efefef;
+	border-radius: 15px;
+	padding: 0 15px;
+	text-align: center;
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.header>input::-webkit-input-placeholder{
+	text-align: center;
+	padding-left: 20px;
+	font-size: 13px;
+}
+.header>.i{
+	width: 20px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-305%,-50%);
+	z-index: 99;
+}
+/*头部end*/
+
+/*footer start*/
+.footer{
+	width: 100%;
+	height: 60px;
+	max-width:640px;
+	position: fixed;
+	bottom: 0px;
+	border-top: 1px solid #ddd;
+	box-sizing: border-box;
+	background-color: white;
+	color: #999;
+}
+.footer>ul>li{
+	width: 25%;
+	height: 60px;
+	float: left;
+	font-size: 13px;
+	text-align: center;
+	cursor: pointer;
+}
+.footer>ul>li:nth-child(1) span{
+	color: red;
+}
+.footer>ul>li .i{
+	width: 40px;
+	margin: 0 auto;
+}
+.footer>ul>li>a{
+	color: #8a8a8a;
+}
+/*foot end*/
+/*banner start*/
+.banner{
+	width: 100%;
+	position: relative;
+}
+.banner>.item{
+	width:100%;
+}
+.banner>.btns{
+	height: 10px;
+	width: 25px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 10px;
+	margin: 0 auto;
+
+}
+.banner>.btns>span{
+	width: 10px;
+	height: 10px;
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 50%;
+
+}
+.banner>.btns>span.active{
+	background-color: white;
+}
+/*banner end*/
+/*nav start*/
+.nav{
+	width: 100%;
+}
+.nav>ul>li{
+	width: 20%;
+	height: 70px;
+	z-index: 1;
+	float: left;
+	text-align: center;
+	font-size: 12px;
+	padding: 10px 0px 0px;
+}
+.nav  .nav-item{
+	width: 40px;
+	margin:  0 auto;
+}
+.nav  .nav-item>img{
+	width: 40px;
+	height: 40px;
+}
+
+/*nav end*/
+/*main start*/
+main>.top-container{
+	width: 100%;
+	background-color: #efefef;
+	padding: 10px 0 0 10px;
+	box-sizing: border-box;	
+}
+main>.top-container .box2{
+	width: 78px;
+	height: 16px;
+	font-size: 12px;
+	background-color: red;
+	border-radius: 10px;
+	margin-top: -18px;
+	color: white;
+	margin-left: -1px;
+}
+main>.top-container .box3{
+	width: 34px;
+	height: 16px;
+	font-size: 12px;
+	background-color: #e48ecd;
+	border-radius: 10px;
+	margin-top: -18px;
+	color: white;
+	margin-left: -1px;
+}
+main>.top-container>div>div{
+	padding: 0 4px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+main>.top-container>div{
+	background-color:white;
+	width: 50%;
+	height: 90px;
+	padding: 0 10px 10px 0;
+	box-sizing: border-box;
+	background-clip: content-box;
+	
+}
+main>.top-container>div:first-child{
+	background-color: #dfa91133;
+}
+.top-container .img-box{
+	width: 100px;
+	height:40px;
+	padding: 0px;
+	margin: 0 auto;
+}
+.top-container #btns{
+	width: 36px;
+	height: 24px;
+	background-color: #775c0e94;
+	border-radius: 15px;
+	margin-top: 6px;
+	cursor: pointer;
+	line-height: 24px;
+	color: white;
+	position: relative;
+
+}
+.top-container #btns>span{
+	width: 0;
+	height: 0;
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	right: -4px;
+	border:7px solid transparent;
+	border-left-color: white;
+}
+.top-container .img-box>div{
+	width: 40px;
+}
+.top-container .detail{
+	font-size: 12px;
+	color: #df11cd85;
+}
+/*商品列表 start*/
+main>.bottom-container .banner_text{
+	text-align: center;
+	margin: 10px 0px;
+}
+.shop_list{
+	background-color: #efefef;
+}
+.shop_list>.shop_item{
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 13px;
+	box-sizing: border-box;
+	background-color: white;
+}
+.shop_list>.shop_item:first-child{
+	padding-top: 0px;
+}
+.shop_list>.shop_item>div:nth-child(2){
+	font-size: 13px;
+	margin-bottom: 3px;
+	margin-top: 3px;
+}
+.shop_list>.shop_item>div:nth-child(2)>.text_r{
+	color: #b2a9a9;
+}
+.shop_list>.shop_item>div:nth-child(3){
+	color: red;
+	font-size: 12px;
+
+}
+.shop_list>.shop_item>div:nth-child(3) span::before{
+	content: "促";
+	color: white;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	border-radius: 15px;
+	background-color: red;
+}
+/*商品列表 end*/
+/*main end

@@ -1,0 +1,284 @@
+.box{
+	width: 100%;
+	height: 100%;
+	background:url(../img/th.jpg) no-repeat ;
+	position: relative;
+}
+/*导航条 */
+.navbar{
+	width: 1260px;
+	height: 45px;
+	/*background-color: #ddd;*/
+	margin:0 auto;
+}
+/**/
+.navbar>.items{
+	width: 522px;
+	height: 100%;
+	/*background-color: #005;*/
+	display: flex;
+	justify-content: space-between;
+}
+.navbar>.items>li{
+	float: left;
+	color:white;
+	font-size: 13.5px;
+	line-height: 45px;
+	cursor:pointer;
+}
+
+
+.navbar>.login{
+	width: 125px;
+	height: 100%;
+	/*background-color: #005;*/
+	font-size: 14px;
+	color: white;
+	padding-top: 5px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.navbar>.login>div:first-child{
+	font-size: 13.5px;
+	line-height: 30px;
+	cursor:pointer;
+}
+.navbar>.login>.icon{
+	width: 30px;
+	height: 30px;
+	background-color: #ddd;
+	border-radius: 50%;
+	margin-left: 10px;
+	position: relative;
+	cursor:pointer;
+}
+.navbar>.login>.icon::before{
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background: url(../img/hpc27.png) no-repeat -17px -155px;
+}
+.navbar>.login>.btn{
+	width: 20px;
+	height: 20px;
+/*	background-color: red;*/
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.navbar .btn>span{
+	width: 100%;
+	height: 3px;
+	background-color: #ddd;
+	display: block;
+	cursor:pointer;
+}
+/*导航条 end*/
+
+/*内容区域 begin*/
+.box>.main{
+	width: 1260px;
+	height: 195px;
+	/*background-color: #005;*/
+	margin: 0 auto;
+	padding-top: 90px;
+    box-sizing: border-box;
+    position: relative;
+}
+.box>.main>.logo{
+	width: 130px;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background:  url(../img/hpc27.png) no-repeat 0px 0px;
+}
+.box>.main>.container{
+	width: 620px;
+	height: 86px;
+/*	background-color: #066;*/
+	position: absolute;
+	left: 150px;
+	bottom: 0;
+}
+.box>.main>.container>.top{
+	width: 100%;
+	height: 36px;
+/*	background-color: orange;*/
+}
+.box>.main>.container>.bottom{
+	height: 50px;
+	width: 100%;
+	background-color: yellow;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border-radius: 5px;
+	/*溢出隐藏*/
+	overflow: hidden;
+	box-shadow: 0px 3px 5px -1px #333;
+}
+.box .main .container .ipt{
+	width: 570px;
+	height: 50px;
+	background-color: white;
+	font-size: 20px;
+	padding-left: 10px;
+	box-sizing: border-box;
+	color: #aaa;
+	z-index: 100;
+}
+.box .main .container .ipt:focus+div{
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	z-index: -1;
+}
+.box .main .container .btn{
+	width: 50px;
+	height: 50px;
+	position: relative;
+	border: 0;
+	background-color: white;
+}
+.box .main .container .btn:active{
+	border: 0;
+}
+.box .main .container .btn::before{
+	width: 100%;
+	height: 100%;
+	content: "";
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../img/hpc27.png)no-repeat -160px -52px;
+}
+.box .main .container .top>div{
+	height: 100%;
+	float: left;
+	cursor: pointer;
+	padding: 0 15px;
+	line-height: 36px;
+	background-color: white;
+	position: relative;
+}
+.box .main .container .top>div::after{
+	content: "";
+	width: 0;
+	height: 0;
+	border: 10px solid red;
+	border-top-width:0px;
+	border-bottom-width: 36px;
+	border-bottom-color: white;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	position: absolute;
+	right: -10px;
+	bottom: 0;
+	z-index: 1;
+}
+.main .container .top>div:first-child::before{
+	content: "";
+	width: 5px;
+	height: 115%;
+	background-color: white;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.box .main .container .top>div:last-child{
+	background-color: #ddd;
+	color: #333;
+	margin-left: 6px;
+}
+.box .main .container .top>div:last-child::after{
+	content: "";
+	border-bottom-color: #ddd;
+
+
+}
+/*内容区域 end*/
+
+/*按钮组 begin*/
+.box>.btns{
+	opacity: 0.5;
+	/*background-color: blue;*/
+	position: absolute;
+	right: 80px;
+	bottom: 75px;
+}
+.box>.btns>li{
+	float: left;
+	width: 40px;
+	height: 40px;
+	/*border-radius: 50%;*/
+	margin-right: 23px;
+	/*border:3px solid white;*/
+	box-sizing: border-box;
+	background-color: pink;
+	
+}
+.box>.btns>li:first-child{
+
+	background:url(../img/下载2.png) no-repeat 0px 0px;
+	cursor: pointer;
+}
+.box>.btns>li:first-child::hover{
+
+	background:url(../img/下载2.png) no-repeat 0px 0px;
+	cursor: pointer;
+}
+.box>.btns>li:nth-child(2){
+
+	background:url(../img/下载.png) no-repeat 0px -84px;
+	cursor: pointer;
+}
+.box>.btns>li:nth-child(3){
+
+	background:url(../img/下载.png) no-repeat 0px -126px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+.box>.btns>li:last-child{
+
+	background:url(../img/下载.png) no-repeat 0px -42px;
+	cursor: pointer;
+}
+/*按钮组 end*/
+/*页脚 start*/
+.box>.footer{
+	height: 35px;
+	width: 100%;
+	background-color: black;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 8;
+}
+.box>.footer>.container{
+	width: 1800px;
+	height: 35px;
+	font-size: 16px;
+	margin: 0  auto;
+	line-height: 35px;
+	font-size: 12px;
+}
+.box>.footer>.container>.left li{
+	margin-right: 25px;
+	display: inline-block;
+}
+/*页脚 end*/

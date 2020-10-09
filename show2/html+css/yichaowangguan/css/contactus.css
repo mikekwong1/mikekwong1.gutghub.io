@@ -1,0 +1,424 @@
+.box{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+/*头部 strat */
+header{
+	width: 100%;
+}
+header>.top-header{
+	height: 30px;
+	width: 100%;
+	/*padding: 0 250px;*/
+	
+	box-sizing: border-box;
+	color: white;
+	background-color: #2a5371;
+	line-height: 30px;
+}
+header>.top-header>.nav{
+	position: relative;
+	width: 1200px;
+	height: 100%;
+	/*background-color: pink;*/
+	margin: 0 auto;
+}
+/*header>.top-header .item-left{
+	position: absolute;
+}*/
+header>.top-header .item-right{
+	position: absolute;
+	right: 0px;
+	/*background-color: green;*/
+}
+header>.top-header>.nav>ul>li{
+	float: left;
+	margin: 0 10px;
+	position: relative;
+}
+header>.top-header>.nav>ul>li:nth-child(2)::after{
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: -20px;
+	bottom: -7px;
+	top: 010px;
+	border-left: 1px solid white;
+}
+header>.top-header>.nav>ul>li:nth-child(3)::after{
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: -20px;
+	bottom: -7px;
+	top: 010px;
+	border-left: 1px solid white;
+}
+header>.top-header>.nav>ul>li:nth-child(4)::after{
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: -20px;
+	bottom: -7px;
+	top: 010px;
+	border-left: 1px solid white;
+}
+/*top end*/
+/*bottom-header start*/
+header>.bottom-header{
+	height: 65px;
+	width: 1200px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	position: relative;
+}
+header>.bottom-header>.login-img{
+	width:96px;
+	height:58px;
+	position: absolute;
+	left: 80px;
+	top: 10px;
+}
+header>.bottom-header>ul{
+	position: absolute;
+	right: -16px;
+	top: 23px;
+}
+header>.bottom-header>ul>li{
+	float: left;
+	margin-right: 25px;
+	position: relative;
+}
+
+header>.bottom-header>ul>li>a{
+	color: black;
+}
+header>.bottom-header>ul>li>a>span{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+}
+header>.bottom-header>ul>li>a:hover{
+	color: #3375f3;
+	font-weight: 500;
+	border-bottom: 2px solid #3375f3;
+	padding-bottom: 7px;
+}
+/*头部end*/
+/*footer start*/
+footer{
+	margin-top: 20px;
+	width: 100%;
+	height: 100px;
+	background-color: #2a5371;
+	color: white;
+	position: absolute;
+    left: 0;
+   /* bottom: 0;*/
+}
+footer>ul{
+	width: 724px;
+	height: 20px;
+	font-size: 16px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+
+}
+footer>ul>li{
+	float: left;
+	margin-right: 10px;
+}
+/*footer end*/
+/*main start*/
+main{
+	width: 100%;
+	height: auto;
+}
+main>section{
+	width: 1000px;
+	height: 470px;
+	margin:35px auto 0;
+	position: relative;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+main>.banner{
+	width: 100%;
+	height: 600px;
+}
+main>section>header{
+	font-weight: 600;
+	font-size: 14px;
+	color: #767676;
+	position: absolute;
+	top: -25px;
+	left: 0px;
+}
+main>section>div.container{
+	width: 950px;
+	height: 415px;
+	/*background-color: green;*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+main>section>div.container>div.container-l{
+	width: 550px;
+	height: 100%;
+	/*background-color: pink;*/
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+main>section>div.container>div.container-r{
+	width: 400px;
+	height: 100%;
+	background-color: #ebebeb;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+main>section>div.container>div.container-r>div.container-r-top{
+	width: 400px;
+	height: 258px;
+	background-color: #ebebeb;
+	padding: 10px;
+	box-sizing: border-box;
+	position: relative;
+	border-bottom: 2px solid black;
+}
+main>section>div.container>div.container-r>div.container-r-top>div.top{
+	width: 100%;
+	height: 60%;
+}
+main>section>div.container>div.container-r>div.container-r-top div.icon{
+	height: 25%;
+	font-size: 14px;
+	font-weight: 600;
+	text-indent: 25px;
+	position: relative;
+	padding-top: 15px;
+	box-sizing: border-box;
+}
+
+main>section>div.container>div.container-r>div.container-r-top div.icon::before{
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: url(../img/contact/web.png) no-repeat 0 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+main>section>div.container>div.container-r>div.container-r-top div.icon:nth-child(2)::before{
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: url(../img/contact/tel.png) no-repeat 0 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+main>section>div.container>div.container-r>div.container-r-top div.icon:nth-child(3)::before{
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: url(../img/contact/adds.png) no-repeat 0 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+main>section>div.container>div.container-r>div.container-r-top div.icon:nth-child(4)::before{
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: url(../img/contact/inform.png) no-repeat 0 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+main>section div.container-r-top>div.bottom{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 40%;
+}
+main>section div.container-r-top>div.bottom>div{
+	float: left;
+}
+main>section div.container-r-top>div.bottom>.contact-l{
+	width: 42%;
+	height: 100%;
+	padding: 10px;
+}
+main>section div.container-r-top>div.bottom>.contact-r{
+	height: 100%;
+	width: 57%;
+	margin-left: 10px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+main>section div.container-r-top>div.bottom>.contact-r>.i{
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+}
+main>section div.container-r-top>div.bottom>.contact-r>.right{
+	position: absolute;
+	left: 74px;
+	bottom: 10px;
+	font-weight: 550;
+	font-size: 14px;
+
+}
+
+
+main div.container-r-top>div.bottom span{
+	display: block;
+	height: 30%;
+	width: 100%;
+	font-size: 13px;
+	font-weight: 520;
+}
+main div.container-r>div.container-r-botom{
+	width: 400px;
+	height: 153px;
+	position: relative;
+	background-color: #ebebeb;
+	padding: 10px;
+	box-sizing: border-box;
+}
+main div.container-r>div.container-r-botom>.c-l>header{
+	font-size: 14px;
+	font-weight: 600;
+
+}
+main div.container-r>div.container-r-botom>.c-l{
+	width: 50%;
+	height: 108%;
+	/*background-color: pink;*/
+}
+main div.container-r>div.container-r-botom>.c-l>div{
+	width: 100%;
+	height: 25px;
+	margin-top: 10px;
+}
+main div.container-r>div.container-r-botom>.c-l>div>button{
+	margin-left: 5px;
+	height: 25px;
+	border:1px solid black;
+	outline: none;
+	background-color: #ebebeb;
+}
+main div.container-r>div.container-r-botom>.c-l>div>input{
+	width: 70px;
+	height: 25px;
+	background-color: #ebebeb;
+	border:1px solid black;
+}
+main div.container-r>div.container-r-botom>.c-l>input{
+	width: 150px;
+	height: 23px;
+	margin-top: 5px; 
+	border:1px solid black;
+	outline: none;
+	background-color: #ebebeb;
+}
+main div.container-r>div.container-r-botom input{
+	padding-left: 5px;
+	box-sizing: border-box;
+}
+main div.container-r>div.container-r-botom input::-webkit-input-placeholder{
+	padding-left: 1px;
+	box-sizing: border-box;
+}
+main div.container-r>div.container-r-botom input:focus::-webkit-input-placeholder{
+	color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main div.container-r>div.container-r-botom>.c-r{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	background-color: #efefef;
+}
+main div.container-r>div.container-r-botom>.c-r>div.top{
+	position: absolute;
+    top: 32px;
+    left: 13px;
+}
+main div.container-r>div.container-r-botom>.c-r>div.top>label{
+	position: absolute;
+    left: 10px;
+    top: 6px;
+}
+main div.container-r>div.container-r-botom>.c-r textarea:focus+label{
+	color: transparent;
+}
+main div.container-r>div.container-r-botom>.c-r textarea{
+	padding-top: 10px;
+    padding-left: 10px;
+    width: 155px;
+    height: 76px;
+    border: 1px solid black;
+    background-color: #ebebeb;
+}
+main div.container-r>div.container-r-botom>.c-r>.bottom{
+	width: 100%;
+	height: 30px;
+	background-color: #ebebeb;
+	position: absolute;
+	bottom:0px; 
+}
+main div.container-r>div.container-r-botom>.c-r button{
+	background-color: #5d5d5d;
+    border: 1px solid #5d5d5d;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+}
+main div.container-r>div.container-r-botom>.c-r button:nth-child(1){
+	position: absolute;
+    bottom: 0px;
+     left: 45px;
+}
+main div.container-r>div.container-r-botom>.c-r button:nth-child(2){
+	position: absolute;
+    bottom: 0px;
+    left: 108px;
+}
+
+/*main end*/

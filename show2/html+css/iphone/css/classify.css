@@ -1,0 +1,149 @@
+/*头部start*/
+.box{
+	max-width: 640px;
+	height: 100%;
+	margin:  0 auto;
+	border:1px solid #ddd;
+	box-shadow: 0px  0px 5px 0px #ddd;
+	padding: 40px 0px 80px;
+	box-sizing: border-box;
+}
+.header{
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	text-align: center;
+	/*line-height: 60px;*/
+	position: fixed;
+	top: 0px;
+	max-width: 640px;
+	border-bottom: 1px solid #ddd;
+	box-sizing: border-box;
+	z-index: 9;
+}
+.header>input:focus+div{
+	display: none;
+}
+.header>input:focus::-webkit-input-placeholder{
+	color: transparent;
+}
+.header>input{
+	width: 90%;
+	height: 36px;
+	background-color: #efefef;
+	border-radius: 15px;
+	padding: 0 15px;
+	text-align: center;
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.header>input::-webkit-input-placeholder{
+	text-align: center;
+	padding-left: 20px;
+	font-size: 13px;
+}
+.header>.i{
+	width: 20px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-305%,-50%);
+	z-index: 99;
+}
+/*头部end*/
+
+/*footer start*/
+.footer{
+	width: 100%;
+	height: 60px;
+	max-width:640px;
+	position: fixed;
+	bottom: 0px;
+	border-top: 1px solid #ddd;
+	box-sizing: border-box;
+	background-color: white;
+	color: #999;
+}
+.footer>ul>li{
+	width: 25%;
+	height: 60px;
+	float: left;
+	font-size: 13px;
+	text-align: center;
+}
+.footer>ul>li:nth-child(2) span{
+	color: red;
+}
+.footer>ul>li .i{
+	width: 40px;
+	margin: 0 auto;
+}
+.footer>ul>li>a{
+	color: #8a8a8a;
+}
+/*foot end*/
+/*main start*/
+/*main aside start*/
+main>.aside{
+	width: 22%;
+	background-color: #efefef;
+}
+main .aside li{
+	width: 100%;
+	padding: 20px 0px;
+	text-align: center;
+	font-size: 13px;
+}
+
+main .aside li.active{
+	background-color: white;
+	color: red;
+	position: relative;
+}
+main .aside li.active::before{
+	content: "";
+	width: 4px;
+	height: 13px;
+	background-color: red;
+	position: absolute;
+	left: 0px;
+	top: 22px;
+	cursor: pointer;
+}
+/*main aside end*/
+/*main section start*/
+main>section{
+	width: 78%;
+	/*height: 1000px;*/
+	background-color:white;
+	padding: 10px;
+	box-sizing: border-box;
+}
+main .shop-list{
+	width: 100%;
+	/*height: 500px;*/
+	/*background-color: pink;*/
+}
+main .shop-list h5{
+	padding: 10px 0px;
+}
+main .shop-list .i{
+	margin:0 auto;
+}
+main .shop-item{
+	width: 33.3333%;
+	height: 114px;
+	text-align: center;
+	float: left;
+	font-size: 12px;
+
+}
+main .shop-item>div{
+	width: 80px;
+	height: 80px;
+}
+/*main section end*/
+/*main end

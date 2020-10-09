@@ -1,0 +1,322 @@
+.box{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+/*头部 strat */
+header{
+	width: 100%;
+}
+header>.top-header{
+	height: 30px;
+	width: 100%;
+	/*padding: 0 250px;*/
+	
+	box-sizing: border-box;
+	color: white;
+	background-color: #2a5371;
+	line-height: 30px;
+}
+header>.top-header>.nav{
+	position: relative;
+	width: 1200px;
+	height: 100%;
+	/*background-color: pink;*/
+	margin: 0 auto;
+}
+/*header>.top-header .item-left{
+	position: absolute;
+}*/
+header>.top-header .item-right{
+	position: absolute;
+	right: 0px;
+	/*background-color: green;*/
+}
+header>.top-header>.nav>ul>li{
+	float: left;
+	margin: 0 10px;
+	position: relative;
+}
+header>.top-header>.nav>ul>li:nth-child(2)::after{
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: -20px;
+	bottom: -7px;
+	top: 010px;
+	border-left: 1px solid white;
+}
+header>.top-header>.nav>ul>li:nth-child(3)::after{
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: -20px;
+	bottom: -7px;
+	top: 010px;
+	border-left: 1px solid white;
+}
+header>.top-header>.nav>ul>li:nth-child(4)::after{
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: -20px;
+	bottom: -7px;
+	top: 010px;
+	border-left: 1px solid white;
+}
+/*top end*/
+/*footer start*/
+footer{
+	margin-top: 20px;
+	width: 100%;
+	height: 100px;
+	background-color: #2a5371;
+	color: white;
+	position: absolute;
+    left: 0;
+   /* bottom: 0;*/
+}
+footer>ul{
+	width: 724px;
+	height: 20px;
+	font-size: 16px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+
+}
+footer>ul>li{
+	float: left;
+	margin-right: 10px;
+}
+/*footer end*/
+/*bottom-header start*/
+header>.bottom-header{
+	height: 65px;
+	width: 1200px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	position: relative;
+}
+header>.bottom-header>.login-img{
+	width:96px;
+	height:58px;
+	position: absolute;
+	left: 80px;
+	top: 10px;
+}
+header>.bottom-header>ul{
+	position: absolute;
+	right: -16px;
+	top: 23px;
+}
+header>.bottom-header>ul>li{
+	float: left;
+	margin-right: 25px;
+	position: relative;
+}
+
+header>.bottom-header>ul>li>a{
+	color: black;
+}
+header>.bottom-header>ul>li>a>span{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+}
+header>.bottom-header>ul>li>a:hover{
+	color: #3375f3;
+	font-weight: 500;
+	border-bottom: 2px solid #3375f3;
+	padding-bottom: 7px;
+}
+/*头部end*/
+/*main start*/
+main{
+	width: 100%;
+}
+main>section{
+	width: 1037px;
+	height: 550px;
+	margin:35px auto 0;
+	position: relative;
+	border-bottom: 2px solid #941c1d;
+}
+main>section>.banner{
+	width: 100%;
+	height: 600px;
+}
+main>section>header{
+	width: 366px;
+	height: 50px;
+	margin: 0 auto;
+	position: relative;
+}
+main>section>header>div{
+	float: left;
+}
+main>section>header>.i{
+	width: 135px;
+	height: 4px;
+}
+main>section>header>div:nth-child(1){
+	margin-top: 12px;
+	margin-right: 12px;
+}
+main>section>header>div>span{
+	font-weight: 900;
+	font-size: 18px;
+}
+main>section>header>div:nth-child(3){
+	margin-left: 12px;
+}
+main>section>header>div:nth-child(4){
+	color: #941b1d;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -35px;
+}
+main aside{
+	margin-top: 30px;
+	position: absolute;
+	left: 0;
+}
+
+main aside>div{
+	letter-spacing:2px;
+	position: relative;
+	border-top: 15px solid #941c1d;
+	background-color: #e4e4e4;
+	width: 67px;
+	height: 100px;
+	float: left;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 600;
+	padding: 15px 28px;
+	box-sizing: border-box;
+}
+main aside>div:nth-child(1){
+	background-color: #941c1d;
+	color: white;
+}
+main aside>div:nth-child(2):after,main aside>div:nth-child(3):after{
+	content: "";
+	width: 100%;
+	border-top: 3px solid #941c1d;
+	position: absolute;
+	top: 7px;
+	left: 0px;
+}
+main aside>div:nth-child(1):after{
+	content: "";
+	position: absolute;
+	bottom: -37px;
+	left: 0px;
+	width: 70px;
+	height: 37px;
+	background: url(../img/introduce/down.png) no-repeat 0px 0px;
+}
+/*aside end*/
+/*article start*/
+main article.contianer{
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	bottom: 0;
+	/*background-color: pink;*/
+	overflow: hidden;
+}
+main article.contianer>div.contianer-l{
+	width: 40%;
+	height: 100%;
+	/*float: left;*/
+	/*background-color: yellow;*/
+}
+main article.contianer>div.contianer-l>.top-i{
+	width: 100%;
+	height: 51%;
+}
+main article.contianer>div.contianer-l>.bottom{
+	width: 100%;
+	height: 48%;
+}
+main article.contianer>div.contianer-l>.bottom>div{
+	width: 49.5%;
+	height: 100%;
+	float: left;
+	position: relative;
+	border-left: 1px solid white;
+}
+main article.contianer>div.contianer-l>.bottom>.b-left{
+	background-color: #9484c2;
+}
+main article.contianer>div.contianer-l>.bottom>div>div{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	color: white;
+}
+main article.contianer>div.contianer-l>.bottom>div>div span{
+	letter-spacing:5px;
+}
+main article.contianer>div.contianer-l>.bottom>.b-right{
+	background-color: #6ab4b5;
+}
+main article.contianer>div.contianer-r{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 60%;
+	height: 80%;
+	background-color: #efefef;
+	padding: 30px;
+	box-sizing: border-box;
+}
+main article.contianer>div.contianer-r>.contianer{
+	/*letter-spacing:5px;*/
+	/*position: absolute;
+	left: 50%;
+	top: 50%;*/
+	/*transform: translate(-50%,-50%);*/
+	text-indent: 50px;
+	line-height: 25px;
+	font-size: 13px;
+	font-weight: 500;
+	/*float: left;*/
+}
+main article.contianer>div.contianer-r>.login{
+	width: 115px;
+    height: 55px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #941c1d;
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 18px;
+}
+main article.contianer>div.contianer-r>div:nth-child(3){
+	width: 100px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #941c1d;
+    padding: 16px 0 0 20px;
+    box-sizing: border-box;
+    line-height: 18px;
+}
+/*mian end*/
